@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*-----without prototype
+        let person=function(name,year,gender,place)
+        {
+            this.name=name
+            this.year=year
+            this.gender=gender
+            this.place=place
+
+            this.Age=function()
+            {
+                let age=new Date().getFullYear()-this.year
+                console.log(age)
+            }
+        }
+
+            
+
+        let p1=new person('john',1990,'male','hyd')
+        p1.Age()
+        console.log(p1)
+       
+        -------*/
+
+        /*----prototype 
+
+        let person=function(name,year,gender,place)
+        {
+            this.name=name
+            this.year=year
+            this.gender=gender
+            this.place=place
+        }
+
+        person.prototype.Age=function()
+        {
+            let age=new Date().getFullYear()-this.year
+            console.log(age)
+        }
+
+        let p1=new person('jphn',1999,'male','hyd')
+        p1.Age()
+        ------*/
+
+        /*---classical inheritence
+        class person  //parent class
+        {
+            constructor(name,place)
+            {
+                this.name=name
+                this.place=place
+            }
+            Age()
+            {
+                console.log(this.name,this.place)
+            }
+        }
+
+        class employee extends person 
+        {
+            constructor(name,place,gender,year)
+            {
+                super(name,place)
+                this.gender=gender
+                this.year=year
+            }
+            Age()
+            {
+                console.log(this.name,this.year)
+            }
+        }
+
+        let e1=new employee("john","hyd","male",1999)
+        e1.Age()
+        -----*/
+    </script>
+</body>
+</html>
